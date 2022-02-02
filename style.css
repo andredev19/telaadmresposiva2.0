@@ -1,0 +1,382 @@
+/* ======VARIABLES=========== */
+/* ====COLORS==== */
+:root {
+    --nav-color: ;
+    --body-color: ;
+    --h1-color: ;
+    --font-color: ;
+    --header-color: #dd2;
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--font-color);
+    width: 100%;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+li, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    margin-left: 60px;
+    transition: 0.5s;
+    /* overflow-x: hidden; */
+}
+
+/* NAVBAR */
+
+header {
+    height: 100%;
+    width: 54px;
+    background-color: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    overflow: hidden;
+}
+
+nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav__menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 600px;
+    align-items: start;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    height: 60%;
+    column-gap: 1.5rem;
+    flex-wrap: wrap;
+    text-align: left;
+    width: 100%;
+}
+
+.nav__item {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+    transition: 0.5s;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.nav__item:hover {
+    background-color: var(--white);
+    transition: 0.8;
+
+}
+
+.nav__item a {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: left;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.nav__item:hover a {
+    color: var(--blue)
+}
+
+.nav__toggle {
+    margin-top: 30px;
+    margin-right: 0;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 2.5rem;
+    z-index: 900;
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+.nav__toggle span {
+    display: flex;
+    height: 4px;
+    width: 35px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    margin: 6px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.nav__logo {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    position: relative;
+    display: block;
+    min-height: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.icon img {
+    height: 1.5rem;
+    color: white;
+}
+
+.nav__link .title {
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* =========BARRA DE PESQUISA========== */
+
+.search {
+    height: 50px;
+    width: auto;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.search-bar {
+    height: 40px;
+    min-width: none;
+    width: 400px;
+    border: 2px var(--black2) solid;
+    border-radius: 30px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.busca {
+    height: 20px;
+    width: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.linha-pesquisa {
+    height: 40px;
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+/* =========TELA-INICIO========= */
+
+.painel-inicial {
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 900px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.titulo-painel {
+    max-width: 100%;
+    min-width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.painel-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.dado-painel {
+    height: 100px;
+    min-width: 250px;
+    max-width: 300px;
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFDFF;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 5px #aaaaaa4d;
+}
+
+/* ========DADOS-MAIN========== */
+.painel2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.main1 {
+    width: 55%;
+    min-width: 212px;
+    height: auto;
+    margin: 10px 15px;
+    padding: 10px;
+    box-shadow: 0px 0px 20px 5px #aaaaaa4d;
+    border-radius: 10px;
+    align-items: start;
+}
+
+.main1 .title {
+    max-height: 100px;
+}
+
+.main2 {
+    width: 30%;
+    min-width: 212px;
+    height: auto;
+    margin: 10px 15px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 20px 5px #aaaaaa4d;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.listagem {
+    width: 90%;
+    height: auto;
+    margin: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listagem-tabela {
+    overflow-x: scroll;
+    height: auto;
+    margin: 30px 5px;
+}
+
+.listagem li {
+    width: auto;
+}
+
+/* ==========TABELA=========== */
+.compras-recentes {
+    border-collapse: collapse;
+}
+
+.compras-recentes thead {
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.compras-recentes thead th {
+    padding: 8px;
+
+}
+
+.compras-recentes thead th:nth-child(even) {
+    display: flex;
+    justify-content: right;
+    width: 200px;
+}
+
+.compras-recentes td {
+    border-bottom: 2px rgba(110, 103, 103, 0.267) solid;
+    padding: 8px;
+}
+
+.compras-recentes tbody tr td:nth-child(even) {
+    display: flex;
+    justify-content: right;
+    width: 200px;
+}

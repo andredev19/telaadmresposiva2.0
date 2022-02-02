@@ -1,0 +1,30 @@
+
+.opem span:nth-child(1)
+{
+    transform: translateY(10px) rotate(45deg);
+}
+
+
+.opem span:nth-child(2)
+{
+    width: 40px;
+    transform:translateX(60px);
+}
+.opem span:nth-child(3)
+{
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.active{
+    width: 200px;
+}
+
+.space{
+    margin-left: 210px;
+}
+
+@media (max-width:800px) {
+    .space{
+        margin-left: 60px;
+    }
+}
